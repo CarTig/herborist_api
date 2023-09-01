@@ -1,0 +1,243 @@
+/* theme */
+:root{
+    --font-family:'Open Sans', sans-serif,'Righteous', cursive;
+    --primary:#66ad8b;
+    --primary-dark:#005B6D;
+    --primary-light:#93c5ad;
+    --secondary:#E87669;
+    --secondary-light:#ee9f96;
+    --secondary-light1:#f3bab4;
+    --secondary-light2:#fae3e1;
+    --third:#fcd04a;
+    --third-light:#fcde80;
+    --third-light1:#fde7a4;
+    --danger:#d81159;
+    --dark:#022B3A;
+    --background-light:#fffff1;
+    --background-dark:#E1E5F2;
+    --text-color:#52474d;
+    --text-color-light:#FFF;
+    --box-shadow:rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --border:1px solid #eee;
+    
+}
+
+
+/*reset*/
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: var(--font-family);
+    background-color: white;
+}
+
+h1, p{
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* container */
+.container{
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color);
+
+}
+
+
+/* header */
+header{
+    background-color: transparent;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu{
+    margin: 0;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu li{
+    padding-left: 1.5rem;
+}
+
+.header-menu li:hover{
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.active{
+    background-color: var(--primary-dark);
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--text-color) ;
+}
+
+
+/* footer  */
+footer{
+    background: var(--secondary-light1);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-color-light);
+    padding: 1.5rem;
+
+}
+
+
+/* content */
+.content{
+    width: 100%;
+    flex:1;
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    align-items: center;
+    padding: 2rem 0;   
+}
+
+
+/* bienvenue */
+.bienvenue{
+    position: relative;
+    width: 100%;
+    background-image: url(/public/img/background_cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0;
+}
+
+.img-opacity {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 6rem;
+}
+.bienvenue p{
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+}
+
+
+/* decouverte */
+.decouverte {
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.round-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--third-light);
+    width: 200px;
+    height: 200px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.round p {
+    margin: 0;
+    padding: 0 1rem;
+    color: var(--text-color-light);
+}
+
+.round a {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.round:hover {
+    background-color: #FAE3E1;
+}
+
+.round a:hover {
+    color: var(--primary-light);
+}
+
+
+/* citation */
+.citation{
+    font-size: 5rem;
+}
+
+blockquote {
+    font-style: italic; 
+    position: relative; 
+    font-size: 2.5rem;
+}
+
+blockquote p {
+    margin: 0; 
+}
+
+/* coachings */
+.h-section{
+    font-size: 4rem;
+}
+
+.carre-coaching{
+    background-color: var(--primary);
+    color: var(--text-color-light);
+    font-size: 5rem;
+    font-weight: bold;
+    border-radius: 5%;
+    width:60%;
+    align-items: center;
+    text-align: center;
+    transition: ease-in-out 0.3s;
+}
+
+.carre-coaching:hover{
+    background-color: var(--secondary-light);
+    color: var(--third-light);
+    transform: scale(1.1);
+    cursor: pointer;
+}
